@@ -213,11 +213,11 @@ const Header = ({ variant = "transparent" }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link href="/donate" onClick={() => setIsMenuOpen(false)}>
                 <button className="bg-[#9bdd55] text-black font-medium py-2 px-10 rounded-[24px] shadow-md hover:bg-[#85c83f] transition-all text-3xl">
+                  <Link href="/donate" onClick={() => setIsMenuOpen(false)}>
                   Donate now
+                  </Link>
                 </button>
-              </Link>
             </motion.div>
           </motion.div>
         )}

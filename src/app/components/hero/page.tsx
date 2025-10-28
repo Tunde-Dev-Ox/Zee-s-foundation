@@ -1,5 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   // Container animation
@@ -136,7 +137,7 @@ const Hero = () => {
           variants={textVariants}
           className="text-[18px] mb-8 max-w-[600px] leading-relaxed"
         >
-          Empowering families of children with special needs across Africa through shared stories, resources, and unwavering support.
+          Empowering children with special needs across Africa with stories, resources, and unwavering care.
         </motion.p>
 
         <motion.button
@@ -160,7 +161,9 @@ const Hero = () => {
           }}
           className="border-2 border-white rounded-[24px] cursor-pointer py-2 px-9 text-white font-semibold text-[18px] backdrop-blur-sm shadow-lg transition-colors duration-300"
         >
-          Donate now
+          <Link href="/donate">
+            Donate now
+          </Link>
         </motion.button>
       </motion.div>
     </section>
