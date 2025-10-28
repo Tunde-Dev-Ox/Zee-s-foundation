@@ -1,8 +1,11 @@
 "use client";
 import { useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+// @ts-expect-error: no types available for canvas-confetti
 import confetti from "canvas-confetti";
+import Footer from "../components/footer/page";
+import Header from "../components/header/page";
+import { CiSquareCheck } from "react-icons/ci";
 
 const SuccessPage = () => {
   useEffect(() => {
@@ -16,20 +19,16 @@ const SuccessPage = () => {
   }, []);
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-[#f9fafb] text-center px-6 relative overflow-hidden">
-      <div className="bg-white rounded-2xl shadow-md p-10 max-w-lg w-full z-10">
+    <>
+    <Header variant='solid' />
+    <main className="min-h-screen flex flex-col items-center justify-center bg-[#f9fafb] text-center px-5 relative overflow-hidden">
+      <div className="bg-white p-10 max-w-lg w-full z-10">
         <div className="flex justify-center mb-6">
-          <Image
-            src="/checkmark.gif"
-            alt="Success"
-            width={100}
-            height={100}
-            className="rounded-full"
-          />
+            <CiSquareCheck className="text-6xl text-gray-400"/>
         </div>
 
         <h1 className="text-3xl font-bold text-green-700 mb-4">
-          Thank You for Your Kindness ❤️
+          Thank You for Your Kindness
         </h1>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
@@ -42,7 +41,7 @@ const SuccessPage = () => {
         <div className="flex flex-col gap-4">
           <Link
             href="/"
-            className="bg-[#9bdd55] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#89cc4e] transition-all duration-300"
+            className="bg-[#9bdd55] text-white py-3 px-6 rounded-[24px] font-medium hover:bg-[#89cc4e] transition-all duration-300"
           >
             Back to Home
           </Link>
@@ -51,15 +50,13 @@ const SuccessPage = () => {
             href="/community"
             className="text-green-700 underline hover:text-green-800"
           >
-            Join our community of supporters →
+            Join our community of supporters
           </Link>
         </div>
       </div>
-
-      <footer className="mt-10 text-gray-500 text-sm z-10">
-        © {new Date().getFullYear()} Zee&apos;s Foundation. All rights reserved.
-      </footer>
     </main>
+    <Footer />
+    </>
   );
 };
 

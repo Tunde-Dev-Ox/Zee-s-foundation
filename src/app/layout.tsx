@@ -75,7 +75,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${interTight.variable} ${playfairDisplay.variable}`}>
+      <body className={`${interTight.variable} ${playfairDisplay.variable} overflow-x-hidden`}>
         {children}
       </body>
     </html>
