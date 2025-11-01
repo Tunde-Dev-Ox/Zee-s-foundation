@@ -3,29 +3,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.3,
-      duration: 0.8,
-    },
-  }),
-};
-
-const imageZoom = {
-  hidden: { scale: 1.05, opacity: 0.8 },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      duration: 1.2,
-    },
-  },
-};
+import {
+  fadeInUp,
+  fadeInRight,
+  viewportSettings,
+} from "@/lib/utils/motionConfig";
 
 const MissionBanner = () => {
   return (
@@ -33,13 +15,19 @@ const MissionBanner = () => {
       className="pt-12 pb-[8rem]"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }} 
+      viewport={viewportSettings}
     >
       <div className="px-5">
-        <div className="relative max-w-[1200px] m-auto px-5 py-16 text-center rounded-[24px] h-[300px] overflow-hidden">
+        <motion.div
+          variants={fadeInRight}
+          className="relative max-w-[1200px] m-auto px-5 py-16 text-center rounded-[24px] h-[300px] overflow-hidden"
+        >
           {/* Background Image */}
           <motion.div
-            variants={imageZoom}
+            initial={{ scale: 1.05, opacity: 0.8 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+            viewport={viewportSettings}
             className="absolute top-0 left-0 w-full h-full"
           >
             <Image
@@ -59,24 +47,27 @@ const MissionBanner = () => {
           {/* Content */}
           <div className="relative z-10 flex flex-col items-start justify-center">
             <motion.h3
-              className="text-white text-3xl mb-5 text-left"
-              variants={fadeUp}
-              custom={0}
+              variants={fadeInUp}
+              className="text-white text-3xl mb-5 text-left leading-snug max-w-[600px]"
             >
               Ready to help us on our mission?
             </motion.h3>
 
             <motion.button
-              className="border-2 border-white py-2 px-6 rounded-[24px] text-white hover:bg-[#eeeded] hover:text-black duration-700"
-              variants={fadeUp}
-              custom={1}
-              whileHover={{ scale: 1.05 }}
+              variants={fadeInUp}
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "#eeeded",
+                color: "#000",
+                borderColor: "#eeeded",
+              }}
               whileTap={{ scale: 0.95 }}
+              className="border-2 border-white py-2 px-6 rounded-[24px] text-white font-semibold text-lg transition-all duration-700"
             >
               <Link href="/volunteer">Volunteer</Link>
             </motion.button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );

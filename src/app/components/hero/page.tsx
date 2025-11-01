@@ -9,79 +9,75 @@ const Hero = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
+        staggerChildren: 0.2, // slower cascade
+        delayChildren: 0.5,
       }
     }
   };
 
   // Word animations
   const wordVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 50,
-      rotateX: -90 
-    },
+    hidden: { opacity: 0, y: 50, rotateX: -90 },
     show: { 
       opacity: 1, 
       y: 0,
       rotateX: 0,
       transition: {
         type: "spring" as const,
-        damping: 12,
-        stiffness: 100,
+        damping: 18,     // smoother
+        stiffness: 70,   // less snappy
+        duration: 1.3,
       }
     }
   };
 
-  // Subline with different effect
+  // Subline effect
   const sublineVariants = {
-    hidden: { 
-      opacity: 0, 
-      scale: 0.5,
-      y: 20
-    },
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
     show: { 
       opacity: 1, 
       scale: 1,
       y: 0,
       transition: {
         type: "spring" as const,
-        damping: 10,
-        stiffness: 200,
+        damping: 20,
+        stiffness: 60,
+        duration: 1.5,
+        delay: 0.1,
       }
     }
   };
 
-  // Text slide in
+  // Paragraph
   const textVariants = {
     hidden: { opacity: 0, x: -30 },
     show: { 
       opacity: 1, 
       x: 0,
       transition: {
-        duration: 0.8,
+        duration: 1.3,
       }
     }
   };
 
-  // Button pop
+  // Button
   const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0, scale: 0.85 },
     show: { 
       opacity: 1, 
       scale: 1,
       transition: {
         type: "spring" as const,
-        damping: 8,
-        stiffness: 150,
-        delay: 0.5,
+        damping: 15,
+        stiffness: 80,
+        delay: 1.2,
+        duration: 1.5,
       }
     }
   };
 
   return (
-    <section className="relative h-screen pt-[4rem] overflow-hidden">
+    <section className="relative h-screen pt-[4rem] overflow-hidden max-[768px]:pt-0">
       {/* Video Background */}
       <video
         src="https://qkfncm5e7gfdvlw8.public.blob.vercel-storage.com/6323333-uhd_3840_2160_25fps.mp4"
@@ -96,7 +92,7 @@ const Hero = () => {
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
         className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 pointer-events-none"
       />
 
@@ -107,7 +103,7 @@ const Hero = () => {
         animate="show"
         className="relative z-10 flex flex-col items-start justify-center h-full text-white max-w-[1200px] m-auto py-4 px-5"
       >
-        <h1 className="text-5xl md:text-[3.75rem] font-[900] mb-6 leading-tight max-w-[750px]">
+        <h1 className="text-5xl md:text-[4rem] font-[900] mb-6 leading-tight max-w-[750px]">
           <div className="mb-2 flex flex-wrap">
             {["Every", "Child's", "Story"].map((word, i) => (
               <motion.span
@@ -143,23 +139,23 @@ const Hero = () => {
         <motion.button
           variants={buttonVariants}
           whileHover={{ 
-            scale: 1.05,
+            scale: 1.07,
             backgroundColor: "#ffffff",
             color: "#000000",
           }}
-          whileTap={{ scale: 0.95 }}
+          whileTap={{ scale: 0.96 }}
           animate={{
-            y: [0, -8, 0],
+            y: [0, -6, 0],
           }}
           transition={{
             y: {
-              duration: 2,
+              duration: 3,
               repeat: Infinity,
               ease: "easeInOut",
               delay: 2,
             }
           }}
-          className="border-2 border-white rounded-[24px] cursor-pointer py-2 px-9 text-white font-semibold text-[18px] backdrop-blur-sm shadow-lg transition-colors duration-300"
+          className="border-2 border-white rounded-[24px] cursor-pointer py-2 px-9 text-white font-semibold text-[18px] backdrop-blur-sm shadow-lg transition-colors duration-500"
         >
           <Link href="/donate">
             Donate now

@@ -2,49 +2,22 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const StorySection = () => {
+// ✅ Import shared animation config
+import { 
+  containerVariants, 
+  fadeInLeft, 
+  fadeInRight, 
+  viewportSettings 
+} from "@/lib/utils/motionConfig";
+
+type StorySectionProps = {
+  title: string,
+  content: string
+}
+
+const StorySection = ({ title, content }: StorySectionProps) => {
   const contentRef = useRef(null);
-  const isInView = useInView(contentRef, { once: false, amount: 0.4 });
-
-  // Container animations
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1,
-      }
-    }
-  };
-
-  const fadeInLeft = {
-    hidden: { 
-      opacity: 0, 
-      x: -30 
-    },
-    visible: { 
-      opacity: 1, 
-      x: 0,
-      transition: {
-        duration: 0.6,
-      }
-    }
-  };
-
-  const fadeInRight = {
-    hidden: { 
-      opacity: 0, 
-      x: 40 
-    },
-    visible: { 
-      opacity: 1, 
-      x: 0,
-      transition: {
-        duration: 0.7,
-      }
-    }
-  };
+  const isInView = useInView(contentRef, { once: viewportSettings.once, amount: 0.4 });
 
   return (
     <section className="pt-12 py-20">
@@ -52,16 +25,18 @@ const StorySection = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={viewportSettings}
         className="max-w-[1200px] m-auto px-5 flex items-start justify-between max-[850px]:flex-col max-[850px]:gap-8"
       >
+        {/* Left Label */}
         <motion.p 
           variants={fadeInLeft}
           className="text-base font-medium text-gray-600 uppercase tracking-wide"
         >
-          Our story
+          {title}
         </motion.p>
         
+        {/* Right Content */}
         <motion.div
           ref={contentRef}
           variants={fadeInRight}
@@ -73,15 +48,16 @@ const StorySection = () => {
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            viewport={{ once: false }}
+            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+            viewport={viewportSettings}
             className="inline-block text-3xl max-[850px]:text-xl"
             style={{
               color: isInView ? "#404040" : "#737373"
             }}
           >
-            Zee&apos;s Foundation&apos;s mission is to empower families raising children with special needs across Africa.<br /><br />
-            We provide critical resources, support networks, and educational guidance, ensuring families have the tools they need to help their children thrive. Our 100% volunteer-run organization connects parents, caregivers, and professionals, all while creating inclusive communities where every child&apos;s story is valued and celebrated.
+            {Array.isArray(content) 
+          ? content.map((paragraph, i) => <p key={i}>{paragraph}</p>)
+          : <p>{content}</p>}
           </motion.span>
         </motion.div>
       </motion.div>

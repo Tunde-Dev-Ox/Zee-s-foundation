@@ -8,24 +8,24 @@ const footerLinks = [
   {
     title: "About",
     links: [
-      { text: "Our mission", href: "/" },
-      { text: "Meet the team", href: "/" },
+      { text: "Our mission", href: "/our-mission" },
+      { text: "Meet the team", href: "/the-team" },
     ],
   },
   {
     title: "Get involved",
     links: [
-      { text: "Donate", href: "/" },
-      { text: "Volunteer", href: "/" },
-      { text: "Become a member", href: "/" },
+      { text: "Donate", href: "/donate" },
+      { text: "Volunteer", href: "/volunteer" },
+      { text: "Become a member", href: "/become-a-member" },
     ],
   },
   {
     title: "Get help",
     links: [
-      { text: "Blog", href: "/" },
-      { text: "Contact", href: "/" },
-      { text: "Privacy policy", href: "/" },
+      { text: "Blog", href: "/blog" },
+      { text: "Contact", href: "/contact" },
+      { text: "Privacy policy", href: "/privacy-policy" },
     ],
   },
 ];
@@ -72,33 +72,36 @@ const Footer = () => {
             &copy; 2025 Zee&apos;s Foundation. All rights reserved.
           </p>
 
-          <div className="flex gap-6 text-xl text-gray-700">
+          <div className="flex gap-6 text-xl text-gray-700" role="list">
             <motion.a
               href="/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Facebook"
+              aria-label="Visit our Facebook page (opens in new tab)"
               whileHover={{ scale: 1.2, color: "#166534" }}
+              role="listitem"
             >
-              <FaFacebook />
+              <FaFacebook aria-hidden="true" />
             </motion.a>
             <motion.a
               href="/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="TikTok"
+              aria-label="Visit our TikTok page (opens in new tab)"
               whileHover={{ scale: 1.2, color: "#166534" }}
+              role="listitem"
             >
-              <FaTiktok />
+              <FaTiktok aria-hidden="true" />
             </motion.a>
             <motion.a
               href="/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="YouTube"
+              aria-label="Visit our YouTube channel (opens in new tab)"
               whileHover={{ scale: 1.2, color: "#166534" }}
+              role="listitem"
             >
-              <FaYoutube />
+              <FaYoutube aria-hidden="true" />
             </motion.a>
           </div>
         </div>

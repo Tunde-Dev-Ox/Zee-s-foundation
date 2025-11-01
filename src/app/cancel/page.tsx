@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const CancelPage = () => {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-[#f9fafb] text-center px-6">
+    <main id="main-content" className="min-h-screen flex flex-col items-center justify-center bg-[#f9fafb] text-center px-6">
       <div className="bg-white rounded-2xl shadow-md p-10 max-w-lg w-full">
         <div className="flex justify-center mb-6">
           <Image

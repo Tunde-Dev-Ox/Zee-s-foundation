@@ -21,7 +21,7 @@ const SuccessPage = () => {
   return (
     <>
     <Header variant='solid' />
-    <main className="min-h-screen flex flex-col items-center justify-center bg-[#f9fafb] text-center px-5 relative overflow-hidden">
+    <main id="main-content" className="min-h-screen flex flex-col items-center justify-center bg-[#f9fafb] text-center px-5 relative overflow-hidden">
       <div className="bg-white p-10 max-w-lg w-full z-10">
         <div className="flex justify-center mb-6">
             <CiSquareCheck className="text-6xl text-gray-400"/>

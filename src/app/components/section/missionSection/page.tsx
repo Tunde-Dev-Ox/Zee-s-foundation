@@ -4,78 +4,24 @@ import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+// ✅ Import our shared motion config
+import { 
+  containerVariants, 
+  fadeInUp, 
+  fadeInRight, 
+  cardVariants, 
+  viewportSettings 
+} from "@/lib/utils/motionConfig";
+
 const MissionSection = () => {
   const sectionRef = useRef(null);
   const textRef = useRef(null);
-  const isInView = useInView(textRef, { once: false, amount: 0.5 });
+  const isInView = useInView(textRef, { once: viewportSettings.once, amount: 0.5 });
 
-  // Scroll-based color change (hook called without destructuring because scrollYProgress is unused)
   useScroll({
     target: sectionRef,
     offset: ["start end", "end start"]
   });
-
-  // Container animations
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      }
-    }
-  };
-
-  const fadeInUp = {
-    hidden: { 
-      opacity: 0, 
-      y: 40 
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        duration: 0.6,
-      }
-    }
-  };
-
-  const fadeInRight = {
-    hidden: { 
-      opacity: 0, 
-      x: 60,
-      scale: 0.95
-    },
-    visible: { 
-      opacity: 1, 
-      x: 0,
-      scale: 1,
-      transition: {
-        type: "spring" as const,
-        damping: 20,
-        stiffness: 100,
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 50,
-      rotateY: -15
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      rotateY: 0,
-      transition: {
-        type: "spring" as const,
-        damping: 15,
-        stiffness: 80,
-      }
-    }
-  };
 
   return (
     <section ref={sectionRef} className="pt-12">
@@ -83,7 +29,7 @@ const MissionSection = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={viewportSettings}
         className="max-w-[1200px] m-auto px-5 flex justify-between items-center bg-[url('/H9uRg9OcPpfpk6YCqCbyyTkAN14.png')] relative bg-no-repeat bg-cover bg-center max-[1000px]:flex-col py-16"
       >
         {/* Left Content */}
@@ -94,7 +40,7 @@ const MissionSection = () => {
           >
             What we do
           </motion.span>
-          
+
           <motion.p 
             ref={textRef}
             variants={fadeInUp}
@@ -103,9 +49,9 @@ const MissionSection = () => {
               color: isInView ? "#14532d" : "#737373"
             }}
           >
-            Join us in our mission to providing a supportive platform for families of children with special needs across Africa.
+            Join us in our mission to provide a supportive platform for families of children with special needs across Africa.
           </motion.p>
-          
+
           <motion.button 
             variants={fadeInUp}
             whileHover={{ 
@@ -137,8 +83,8 @@ const MissionSection = () => {
             style={{ transformStyle: "preserve-3d" }}
           >
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               className="overflow-hidden"
             >
               <Image 
@@ -153,18 +99,18 @@ const MissionSection = () => {
             </motion.div>
             
             <motion.h3 
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
               className="text-2xl px-4 font-bold text-green-900"
             >
               Community Support
             </motion.h3>
             
             <motion.p 
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
               className="text-base px-4 text-green-900/80 leading-relaxed"
             >
               Connect with other families, share experiences, and find emotional support in our inclusive community.
@@ -173,7 +119,7 @@ const MissionSection = () => {
             <motion.div
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
               whileHover={{ x: 5 }}
               className="px-4 mb-4"
             >

@@ -6,7 +6,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --font-inter: "Inter Tight", sans-serif;
-  --font-heading: "Playfair Display", serif;
+  --font-heading: "DM Sans", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,7 +22,60 @@ body {
   font-family: var(--font-inter), sans-serif;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), sans-serif;
   font-weight: 700;
+}
+
+/* Accessibility: Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessibility: Enhanced focus indicators */
+*:focus-visible {
+  outline: 2px solid #9bdd55;
+  outline-offset: 2px;
+}
+
+/* Ensure buttons and links have visible focus states */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #9bdd55;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
