@@ -30,6 +30,15 @@ export async function POST(req) {
     const session = event.data.object;
     const email = session.customer_email;
     const amount = session.amount_total / 100;
+    
+    let donorEmail = session.customer_email;
+
+    if (!donorEmail && session.customer) {
+        const customer = await stripe.customers.retrieve(session.customer);
+        donorEmail = customer.email;
+    }
+
+    console.log("Sending thank-you email to:", donorEmail);
 
     try {
         console.log("Sending thank-you email to:", email);
