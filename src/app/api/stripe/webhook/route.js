@@ -32,8 +32,9 @@ export async function POST(req) {
     const amount = session.amount_total / 100;
 
     try {
+        console.log("Sending thank-you email to:", email);
         await resend.emails.send({
-            from: "Zee’s Foundation <donations@zee-foundation.org>",
+            from: "Zee’s Foundation <donations@resend.dev>",
             to: email,
             subject: "Thank You for Supporting Zee’s Foundation",
             html: `
