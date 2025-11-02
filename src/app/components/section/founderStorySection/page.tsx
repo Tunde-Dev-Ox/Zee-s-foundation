@@ -71,7 +71,7 @@ const FounderStorySection = () => {
           }}
         >
           Founded in 2025 by{" "}
-          <span className="font-semibold text-green-700">Emayak Ochonogor</span>, a mother of a child with special needs, Zee&apos;s Foundation was born out of her struggle to find support and resources in her community. Determined to make a difference, she created this platform to connect families, share stories, and provide resources. Today, Zee&apos;s Foundation is growing rapidly across Africa — all united by the belief that{" "}
+          <span className="font-semibold text-green-700">Emayak Ochonogor</span>, a mother of a child with Down Syndrome, Zee&apos;s Foundation was born out of her struggle to find support and resources in her community. Determined to make a difference, she created this platform to connect families, share stories, and provide resources. Today, Zee&apos;s Foundation is growing rapidly across Africa — all united by the belief that{" "}
           <span className="font-bold text-green-700">
             every child&apos;s story deserves to be told.
           </span>

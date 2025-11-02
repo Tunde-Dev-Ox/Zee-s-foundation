@@ -17,9 +17,9 @@ const teamMembers = [
     id: 1,
     name: "Emayak Ochonogor",
     role: "Founder & CEO",
-    image: "https://images.pexels.com/photos/3986782/pexels-photo-3986782.jpeg",
+    image: "https://qkfncm5e7gfdvlw8.public.blob.vercel-storage.com/emayak.jpg",
     about:
-      "Emayak leads Zee's Foundation with passion and vision, focusing on creating inclusive programs for children with special needs across Africa.",
+      "Emayak leads the with passion and vision, focusing on creating inclusive programs for children with special needs across Africa. She is dedicated to advocacy and empowerment. A woman who has a child with down syndrome herself, she brings personal experience and unwavering commitment to the organization's mission.",
   },
   {
     id: 2,
@@ -27,7 +27,15 @@ const teamMembers = [
     role: "Program Director",
     image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
     about:
-      "Monday oversees operations and community initiatives, bringing over 10 years of experience in education and child advocacy.",
+      "Monday oversees operations and community initiatives, bringing years of experience in education and child advocacy.",
+  },
+  {
+    id: 3,
+    name: "Joseph Olatunde",
+    role: "IT Specialist",
+    image: "https://qkfncm5e7gfdvlw8.public.blob.vercel-storage.com/1737223588703.jpeg",
+    about:
+      "A product manager and developer with a passion for leveraging technology to create impactful solutions for non-profits. Joseph manages the organization's digital platforms and IT infrastructure.",
   },
 ];
 
