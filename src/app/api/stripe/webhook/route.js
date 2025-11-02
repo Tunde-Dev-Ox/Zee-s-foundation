@@ -40,11 +40,20 @@ export async function POST(req) {
 
     console.log("Sending thank-you email to:", donorEmail);
 
+     await resend.emails.send({
+    from: "Zee’s Foundation <donations@resend.dev>",
+    to: donorEmail,
+    subject: "Thank you for your donation ❤️",
+    html: `<p>Dear donor,</p><p>We truly appreciate your support for children with special needs. Your contribution means the world.</p><p>– Zee’s Foundation</p>`,
+  });
+
+  console.log(`✅ Thank-you email sent to ${donorEmail}`);
+
     try {
         console.log("Sending thank-you email to:", email);
         await resend.emails.send({
             from: "Zee’s Foundation <donations@resend.dev>",
-            to: email,
+            to: donorEmail,
             subject: "Thank You for Supporting Zee’s Foundation",
             html: `
             <div style="background-color:#f8f9fb;padding:40px 0;font-family:'Helvetica Neue',Arial,sans-serif;color:#333;">
