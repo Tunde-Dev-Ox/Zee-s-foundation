@@ -1,6 +1,5 @@
 import Stripe from "stripe";
 import { Resend } from "resend";
-import { buffer } from "micro";
 
 export const config = {
   api: {
@@ -13,15 +12,15 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
   const sig = req.headers.get("stripe-signature");
-  const rawBody = await req.arrayBuffer();
+  const rawBody = await req.text();
 
   let event;
   try {
     event = stripe.webhooks.constructEvent(
-      Buffer.from(rawBody),
-      sig,
-      process.env.STRIPE_WEBHOOK_SECRET
-    );
+        rawBody,
+        sig,
+        process.env.STRIPE_WEBHOOK_SECRET
+    );      
   } catch (err) {
     console.error("Webhook verification failed:", err.message);
     return new Response(`Webhook Error: ${err.message}`, { status: 400 });
