@@ -60,7 +60,7 @@ export async function POST(req) {
           <table align="center" width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.05);">
             <tr>
               <td align="center" style="background-color:#f0f4ff;padding:30px 20px;">
-                <img src="https://zee-foundation.vercel.app/logo.png" alt="Zee’s Foundation" width="90" style="display:block;margin-bottom:10px;">
+                <img src="https://zee-foundation.vercel.app/logo.svg" alt="Zee’s Foundation" width="90" style="display:block;margin-bottom:10px;">
                 <h1 style="font-size:22px;margin:0;color:#2a2a2a;">Thank You for Your Donation</h1>
               </td>
             </tr>
