@@ -162,7 +162,7 @@ const TheTeamPage = () => {
                   alt={selectedMember.name}
                   width={250}
                   height={250}
-                  className="rounded-2xl mb-6 h-[250px] w-full h-full"
+                  className="rounded-2xl mb-6 min-h-[300px] w-full"
                 />
                 <p className="text-gray-700 leading-relaxed">
                   {selectedMember.about}
