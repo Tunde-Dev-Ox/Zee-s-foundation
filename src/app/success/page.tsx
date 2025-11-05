@@ -9,7 +9,6 @@ import { CiSquareCheck } from "react-icons/ci";
 
 const SuccessPage = () => {
   useEffect(() => {
-    // One-time confetti burst on page load
     confetti({
       particleCount: 180,
       spread: 80,

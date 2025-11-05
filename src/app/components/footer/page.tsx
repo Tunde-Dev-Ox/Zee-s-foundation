@@ -69,7 +69,7 @@ const Footer = () => {
         {/* Bottom row */}
         <div className="flex justify-between flex-wrap items-center gap-4 pb-4">
           <p className="text-sm text-gray-600">
-            &copy; 2025 Zee&apos;s Foundation. All rights reserved.
+            &copy; 2025 Zirachi Foundation. All rights reserved.
           </p>
 
           <div className="flex gap-6 text-xl text-gray-700" role="list">

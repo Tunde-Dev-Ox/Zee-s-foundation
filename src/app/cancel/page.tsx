@@ -21,9 +21,9 @@ const CancelPage = () => {
         </h1>
 
         <p className="text-gray-700 mb-6 leading-relaxed">
-          We noticed you didn’t complete your donation.  
-          That’s okay — your willingness to help already means a lot ❤️  
-          If you’d like, you can try again whenever you’re ready.
+          We noticed you didn&apos;t complete your donation.  
+          That&apos;s okay — your willingness to help already means a lot ❤️  
+          If you&apos;d like, you can try again whenever you&apos;re ready.
         </p>
 
         <div className="flex flex-col gap-4">
@@ -38,13 +38,13 @@ const CancelPage = () => {
             href="/about"
             className="text-green-700 underline hover:text-green-800"
           >
-            Learn more about Zee&apos;s Foundation →
+            Learn more about Zirachi Foundation →
           </Link>
         </div>
       </div>
 
       <footer className="mt-10 text-gray-500 text-sm">
-        © {new Date().getFullYear()} Zee&apos;s Foundation. All rights reserved.
+        © {new Date().getFullYear()} Zirachi Foundation. All rights reserved.
       </footer>
     </main>
   );

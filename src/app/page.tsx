@@ -23,7 +23,7 @@ export default function Home() {
       <div className="w-full h-[1px] bg-gray-200 mt-[6rem] max-[768px]:mt-0"></div>
       <StorySection 
        title='Our story'
-       content="Zee's Foundation's mission is to empower families raising children with special needs across Africa. We provide critical resources, support networks, and educational guidance, ensuring families have the tools they need to help their children thrive. Our 100% volunteer-run organization connects parents, caregivers, and professionals, all while creating inclusive communities where every child's story is valued and celebrated. Join us in making a difference, one family at a time."
+       content="Zirachi Foundation's mission is to empower families raising children with special needs across Africa. We provide critical resources, support networks, and educational guidance, ensuring families have the tools they need to help their children thrive. Our 100% volunteer-run organization connects parents, caregivers, and professionals, all while creating inclusive communities where every child's story is valued and celebrated. Join us in making a difference, one family at a time."
       />
       <MapSection />
       <ProblemSection />

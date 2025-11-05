@@ -127,7 +127,7 @@ const PrivacyPolicy = () => {
               className="text-lg text-gray-600 max-w-[700px] m-auto leading-relaxed mb-8"
               variants={fadeInUp}
             >
-              At Zee&apos;s Foundation, we are committed to protecting your privacy and ensuring the security of your personal information. This policy explains how we collect, use, and safeguard your data.
+              At Zirachi Foundation, we are committed to protecting your privacy and ensuring the security of your personal information. This policy explains how we collect, use, and safeguard your data.
             </motion.p>
 
             <motion.p
@@ -155,10 +155,10 @@ const PrivacyPolicy = () => {
                 Introduction
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Welcome to Zee&apos;s Foundation. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal information when you visit our website, make a donation, volunteer, or engage with our programs, and tell you about your privacy rights and how the law protects you.
+                Welcome to Zirachi Foundation. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal information when you visit our website, make a donation, volunteer, or engage with our programs, and tell you about your privacy rights and how the law protects you.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                This policy applies to all information collected through our website, donation platform, and any related services, communications, and programs operated by Zee&apos;s Foundation.
+                This policy applies to all information collected through our website, donation platform, and any related services, communications, and programs operated by Zirachi Foundation.
               </p>
             </motion.div>
 
@@ -199,7 +199,7 @@ const PrivacyPolicy = () => {
               </p>
               <div className="space-y-2 text-gray-700">
                 <p>
-                  <strong>Email:</strong> privacy@zeesfoundation.org
+                  <strong>Email:</strong>info@zirachifoundation.org
                 </p>
                 <p>
                   <strong>Phone:</strong> Available through our contact page

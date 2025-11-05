@@ -15,8 +15,8 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://zee-foundation.vercel.app';
-const siteName = "Zee's Foundation";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://zirachifoundation.org';
+const siteName = "Zirachi Foundation";
 const defaultDescription = "Empowering children with special needs across Africa. Providing resources, support, and advocacy for families.";
 
 export const metadata: Metadata = {
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: siteName,
     description: defaultDescription,
     images: ['/logo.svg'],
-    creator: '@zeesfoundation', // Update with actual Twitter handle if available
+    creator: '@zirachifoundation', // Update with actual Twitter handle if available
   },
   robots: {
     index: true,

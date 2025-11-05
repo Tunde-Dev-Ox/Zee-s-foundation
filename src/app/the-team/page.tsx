@@ -22,14 +22,6 @@ const teamMembers = [
       "Emayak leads the with passion and vision, focusing on creating inclusive programs for children with special needs across Africa. She is dedicated to advocacy and empowerment. A woman who has a child with down syndrome herself, she brings personal experience and unwavering commitment to the organization's mission.",
   },
   {
-    id: 2,
-    name: "Monday Onoja",
-    role: "Program Director",
-    image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
-    about:
-      "Monday oversees operations and community initiatives, bringing years of experience in education and child advocacy.",
-  },
-  {
     id: 3,
     name: "Joseph Olatunde",
     role: "IT Specialist",
@@ -113,7 +105,7 @@ const TheTeamPage = () => {
                   alt={member.name}
                   width={400}
                   height={400}
-                  className="object-cover w-full group-hover:opacity-90 transition-all"
+                  className="object-cover w-full h-[200px] group-hover:opacity-90 transition-all"
                 />
                 <div className="p-4">
                   <h3 className="text-lg font-extrabold">{member.name}</h3>
@@ -147,8 +139,7 @@ const TheTeamPage = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed z-50 bg-white shadow-2xl rounded-t-3xl md:rounded-l-3xl 
-                         p-8 w-full md:w-[420px] md:h-full bottom-0 right-0 flex flex-col"
+              className="fixed z-50 bg-white shadow-2xl rounded-t-3xl md:rounded-l-3xl p-8 w-full md:w-[420px] md:h-full bottom-0 right-0 flex flex-col"
             >
               <div className="flex justify-between items-start mb-6">
                 <div>
@@ -171,7 +162,7 @@ const TheTeamPage = () => {
                   alt={selectedMember.name}
                   width={250}
                   height={250}
-                  className="rounded-2xl mb-6"
+                  className="rounded-2xl mb-6 h-[250px] w-full h-full"
                 />
                 <p className="text-gray-700 leading-relaxed">
                   {selectedMember.about}

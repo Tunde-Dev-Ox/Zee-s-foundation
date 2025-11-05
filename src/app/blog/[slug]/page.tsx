@@ -74,13 +74,13 @@ export async function generateMetadata({
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://zee-foundation.vercel.app';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.zirachifoundation.org';
   const postUrl = `${siteUrl}/blog/${params.slug}`;
   const postImage = post.featuredImage?.url || `${siteUrl}/logo.svg`;
 
   return {
-    title: `${post.title} | Zee's Foundation Blog`,
-    description: post.category || `Read about ${post.title} on Zee's Foundation blog.`,
+    title: `${post.title} | Zirachi Foundation Blog`,
+    description: post.category || `Read about ${post.title} on Zirachi Foundation blog.`,
     keywords: [post.category, post.author, 'special needs', 'Africa', 'children', 'support'],
     authors: [{ name: post.author }],
     openGraph: {

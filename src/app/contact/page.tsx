@@ -24,8 +24,8 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       title: "Email Us",
-      value: "info@momspecialstories.org",
-      href: "mailto:info@momspecialstories.org",
+      value: "info@zirachifoundation.org",
+      href: "mailto:info@zirachifoundation.org",
       color: "from-green-500 to-green-600"
     },
     {

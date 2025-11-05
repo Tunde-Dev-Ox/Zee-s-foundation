@@ -132,13 +132,16 @@ const Header = ({ variant = "transparent" }) => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center" aria-label="Zee's Foundation - Return to homepage">
-              <Image
+              {/* <Image
                 src="/logo.svg"
                 alt="Zee's Foundation logo"
                 width={160}
                 height={40}
                 priority
-              />
+              /> */}
+              <span className="text-[#9bdd55] text-[24px]">
+                Zirachi Foundation
+              </span>
             </Link>
           </div>
 

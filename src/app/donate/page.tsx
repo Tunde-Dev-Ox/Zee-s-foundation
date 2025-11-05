@@ -75,7 +75,7 @@ const Donate = () => {
                 Why Donate?
               </motion.h2>
               <motion.p variants={fadeInRight} className="max-w-[600px] text-lg leading-relaxed text-gray-700">
-                Zee&apos;s Foundation donation program is a vital part of our mission to support children with special needs across Africa. By donating, you change the lives of children out there — in other words, <span className="font-bold text-green-700">you save a life.</span>
+                Zirachi Foundation donation program is a vital part of our mission to support children with special needs across Africa. By donating, you change the lives of children out there — in other words, <span className="font-bold text-green-700">you save a life.</span>
               </motion.p>
             </div>
           </motion.div>

@@ -52,15 +52,15 @@ export async function POST(req) {
 
     try {
       await resend.emails.send({
-        from: "Zee’s Foundation <donations@resend.dev>",
+        from: "Zirachi Foundation <donations@resend.dev>",
         to: donorEmail,
-        subject: "Thank You for Supporting Zee’s Foundation ❤️",
+        subject: "Thank You for Supporting Zirachi Foundation ❤️",
         html: `
         <div style="background-color:#f8f9fb;padding:40px 0;font-family:'Helvetica Neue',Arial,sans-serif;color:#333;">
           <table align="center" width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.05);">
             <tr>
               <td align="center" style="background-color:#f0f4ff;padding:30px 20px;">
-                <img src="https://zee-foundation.vercel.app/logo.svg" alt="Zee’s Foundation" width="90" style="display:block;margin-bottom:10px;">
+                <img src="https://www.zirachifoundation.org/logo.svg" alt="Zirachi Foundation" width="90" style="display:block;margin-bottom:10px;">
                 <h1 style="font-size:22px;margin:0;color:#2a2a2a;">Thank You for Your Donation</h1>
               </td>
             </tr>
@@ -75,7 +75,7 @@ export async function POST(req) {
                   You’re now part of a growing community committed to inclusion, care, and hope.
                 </p>
                 <div style="text-align:center;">
-                  <a href="https://zee-foundation.vercel.app" 
+                  <a href="https://www.zirachifoundation.org" target="_blank"
                     style="background-color:#3b82f6;color:#fff;text-decoration:none;padding:12px 24px;border-radius:8px;display:inline-block;font-weight:bold;">
                     Visit Our Website
                   </a>
@@ -84,8 +84,8 @@ export async function POST(req) {
             </tr>
             <tr>
               <td style="background-color:#f8f9fb;padding:20px;text-align:center;font-size:13px;color:#777;">
-                <p style="margin:0;">Zee’s Foundation © ${new Date().getFullYear()}<br>
-                <a href="https://zee-foundation.vercel.app" style="color:#3b82f6;text-decoration:none;">zee-foundation.vercel.app</a></p>
+                <p style="margin:0;">Zirachi Foundation © ${new Date().getFullYear()}<br>
+                <a href="https://www.zirachifoundation.org" style="color:#3b82f6;text-decoration:none;">www.zirachifoundation.org</a></p>
               </td>
             </tr>
           </table>

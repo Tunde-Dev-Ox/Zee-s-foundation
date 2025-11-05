@@ -14,7 +14,7 @@ const ALLOWED_FREQUENCIES = ["one-time", "monthly"];
 
 // Get base URL - remove trailing slash for consistency
 function getBaseUrl() {
-  const url = process.env.NEXT_PUBLIC_SITE_URL || "https://zee-foundation.vercel.app";
+  const url = process.env.NEXT_PUBLIC_SITE_URL || "https://www.zirachifoundation.org";
   // Remove trailing slash if present
   return url.replace(/\/$/, '');
 }
@@ -144,7 +144,7 @@ export async function POST(req) {
             price_data: {
               currency: "usd",
               product_data: {
-                name: "Zee's Foundation Monthly Donation",
+                name: "Zirachi Foundation Monthly Donation",
                 description: "Recurring monthly donation to support families",
               },
               unit_amount: amount * 100,
@@ -170,7 +170,7 @@ export async function POST(req) {
             price_data: {
               currency: "usd",
               product_data: {
-                name: "Zee's Foundation Donation",
+                name: "Zirachi Foundation Donation",
                 description: "One-time donation to support children with special needs",
               },
               unit_amount: amount * 100, 

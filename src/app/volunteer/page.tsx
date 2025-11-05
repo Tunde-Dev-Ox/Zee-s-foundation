@@ -66,7 +66,7 @@ const Volunteer = () => {
             className="text-4xl md:text-5xl font-bold text-white mb-6 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            Volunteer with Zee&apos;s Foundation
+            Volunteer with Zirachi Foundation
           </motion.h1>
 
           <motion.p

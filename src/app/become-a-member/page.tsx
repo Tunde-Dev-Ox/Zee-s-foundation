@@ -66,7 +66,7 @@ const BecomeAMember = () => {
             className="text-4xl md:text-5xl font-bold text-white mb-6 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            Become a Member of Zee&apos;s Foundation
+            Become a Member of Zirachi Foundation
           </motion.h1>
 
           <motion.p
@@ -89,7 +89,7 @@ const BecomeAMember = () => {
               width="100%"
               height="800"
               className="rounded-xl border-none"
-              title="Become a Member — Zee's Foundation"
+              title="Become a Member — Zirachi Foundation"
             ></iframe>
           </motion.div>
         </div>

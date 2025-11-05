@@ -74,7 +74,7 @@ const OurMission = () => {
               className="text-lg text-gray-600 max-w-[700px] m-auto leading-relaxed mb-12"
               variants={fadeInUp}
             >
-              Zee&apos;s Foundation is committed to creating a world where every child with special needs has the support, resources, and opportunities they deserve. Our mission guides every initiative, program, and partnership we take on.
+              Zirachi Foundation is committed to creating a world where every child with special needs has the support, resources, and opportunities they deserve. Our mission guides every initiative, program, and partnership we take on.
             </motion.p>
 
             <motion.figure
@@ -96,7 +96,7 @@ const OurMission = () => {
 
         <StorySection 
            title="Our mission"
-           content={`At Zee’s Foundation, we believe that every child’s story deserves to be told. Our mission is to empower children with special needs and their families across Africa by providing access to the tools, resources, and support they need to thrive. We are building a community where parents, caregivers, and children are not just seen—but celebrated—and where challenges are met with guidance, understanding, and hope. 
+           content={`At Zirachi Foundation, we believe that every child’s story deserves to be told. Our mission is to empower children with special needs and their families across Africa by providing access to the tools, resources, and support they need to thrive. We are building a community where parents, caregivers, and children are not just seen—but celebrated—and where challenges are met with guidance, understanding, and hope. 
            Through awareness, education, and connection, we strive to break down barriers, challenge misconceptions, and create inclusive spaces where every child can grow, learn, and shine. Every program we run, every story we share, and every resource we provide is a step toward a world where no child is left behind and every family feels supported. Together, we are transforming lives, amplifying voices, and building a brighter, more compassionate future.`}
         />
 

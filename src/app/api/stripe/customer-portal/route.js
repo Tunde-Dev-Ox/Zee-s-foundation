@@ -9,7 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Get base URL - remove trailing slash for consistency
 function getBaseUrl() {
-  const url = process.env.NEXT_PUBLIC_SITE_URL || 'https://zee-foundation.vercel.app';
+  const url = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.zirachifoundation.org';
   // Remove trailing slash if present
   return url.replace(/\/$/, '');
 }
